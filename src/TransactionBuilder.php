@@ -275,7 +275,7 @@ class TransactionBuilder
             throw new TronException('Invalid duration provided, minimum of 3 days');
         }
 
-        return $this->tron->getManager()->request('wallet/freezebalance', [
+        return $this->tron->getManager()->request('wallet/freezebalancev2', [
             'owner_address' => $this->tron->address2HexString($address),
             'frozen_balance' => $this->tron->toTron($amount),
             'frozen_duration' => $duration,
@@ -302,7 +302,7 @@ class TransactionBuilder
             throw new TronException('Invalid resource provided: Expected "BANDWIDTH" or "ENERGY"');
         }
 
-        return $this->tron->getManager()->request('wallet/unfreezebalance', [
+        return $this->tron->getManager()->request('wallet/unfreezebalancev2', [
             'owner_address' =>  $this->tron->address2HexString($owner_address),
             'resource' => $resource
         ]);
