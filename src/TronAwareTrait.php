@@ -107,6 +107,7 @@ trait TronAwareTrait
      * @return float
      */
     public function fromTron($amount): float {
+
         return (float) bcdiv((string)$amount, (string)1e6, 8);
     }
 
@@ -117,6 +118,7 @@ trait TronAwareTrait
      * @return int
      */
     public function toTron($double): int {
+        $double = number_format($double, 6, '.', ''); // 格式化数字，避免科学记数法
         return (int) bcmul((string)$double, (string)1e6,0);
     }
 
