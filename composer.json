@@ -20,17 +20,15 @@
 
     "require": {
         "php": ">=7.4",
-        "comely-io/data-types": "^1.0",
+        "tronapi/data-types": "^1.0",
         "guzzlehttp/guzzle": "^7.2",
-        "iexbase/web3.php": "^2.0.1",
+        "slivka-b/web3.php": "^1.0",
         "kornrunner/secp256k1": "^0.2",
-        "simplito/elliptic-php": "^1.0",
-        "ext-json": "*",
-        "ext-bcmath": "*"
+        "simplito/elliptic-php": "^1.0"
     },
 
     "require-dev": {
-        "phpunit/phpunit": "^6.0"
+        "phpunit/phpunit": "^9.4"
     },
     "autoload": {
         "psr-4": {
